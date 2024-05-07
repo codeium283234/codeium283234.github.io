@@ -4,22 +4,26 @@
 <title>Bryce’s Bait and Tackle</title>
 <style>
 body {
-  background-color: #800080;
+  background-color: #800080; /* Purple */
 }
 
-.header {
-  background-color: #0000ff;
+header {
+  background-color: #003366; /* Dark Blue for better contrast */
   padding: 10px;
   text-align: center;
   font-size: 30px;
   color: white;
 }
 
-.box {
-  background-color: #ffff00;
+main {
+  display: block;
+  margin: 20px;
+}
+
+.section {
+  background-color: #ffffa0; /* Lighter yellow for better contrast */
   padding: 50px;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin-top: 20px;
 }
 
 .center {
@@ -27,7 +31,7 @@ body {
 }
 
 .button {
-  background-color: #008000;
+  background-color: #006400; /* Dark Green for better contrast */
   border: none;
   color: white;
   padding: 10px 20px;
@@ -40,58 +44,28 @@ body {
 }
 
 .button:hover {
-  background-color: #00ff00;
+  background-color: #00cc00; /* Lighter Green when hovered */
 }
 </style>
 </head>
 <body>
 
-<div class="header">
+<header>
   <h1>Bryce’s Bait and Tackle</h1>
-</div>
+</header>
 
-<div class="box">
-  <h1 class="center">Welcome to Bryce’s Bait and Tackle!</h1>
-  <p class="center">Bryce’s Bait and Tackle is a local business that offers high quality bait and tackle for your next fishing trip. We have a wide selection of rods, reels, and lures, and our friendly staff is always ready to help you find what you need. Whether you’re a seasoned angler or just starting out, we have something for everyone.</p>
-  <p class="center"><a class="button" href="products.html">View Our Products</a></p>
-</div>
+<main>
+  <section class="section">
+    <h2 class="center">Welcome to Bryce’s Bait and Tackle!</h2>
+    <p class="center">Bryce’s Bait and Tackle is a local business that offers high quality bait and tackle for your next fishing trip. We have a wide selection of rods, reels, and lures, and our friendly staff is always ready to help you find what you need. Whether you’re a seasoned angler or just starting out, we have something for everyone.</p>
+    <p class="center"><a class="button" href="products.html" role="button" aria-label="View our products">View Our Products</a></p>
+  </section>
 
-<div class="box">
-  <h1 class="center">Angler’s Delight</h1>
-  <p class="center"><img src="https://i.imgur.com/KVJ3QKl.png" alt="Angler's Delight" width="300" height="300"></p>
-  <p class="center">The Angler’s Delight is our top-of-the-line rod. With a sturdy design and a powerful reel, it’s the perfect choice for serious anglers. Try it out and see why we’re the best in the business.</p>
-  <p class="center"><a class="button" href="anglers_delight.html">Upgrade to Angler’s Delight</a></p>
-</div>
+  <!-- Additional sections go here -->
 
-<div class="box">
-  <h1 class="center">Catch of the Day</h1>
-  <p class="center"><img src="https://i.imgur.com/bCUu3QB.png" alt="Catch of the Day" width="300" height="300"></p>
-  <p class="center">The Catch of the Day is a mid-range rod that’s perfect for casual anglers. With a comfortable grip and a reliable reel, it’s the perfect choice for a day on the water.</p>
-  <p class="center"><a class="button" href="catch_of_the_day.html">Upgrade to Catch of the Day</a></p>
-</div>
-
-<div class="box">
-  <h1 class="center">Fishing Frenzy</h1>
-  <p class="center"><img src="https://i.imgur.com/Nxh1vKj.png" alt="Fishing Frenzy" width="300" height="300"></p>
-  <p class="center">The Fishing Frenzy is our entry-level rod. With a comfortable design and a durable reel, it’s perfect for beginners. Try it out and see why we’re the best in the business.</p>
-  <p class="center"><a class="button" href="fishing_frenzy.html">Upgrade to Fishing Frenzy</a></p>
-</div>
+</main>
 
 <script>
-function openPage(pageName) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-  document.getElementById(pageName).style.display = "block";
-  document.getElementById(pageName + "-tab").className += " active";
-}
-
 document.getElementById("defaultOpen").click();
 </script>
 
